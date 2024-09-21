@@ -22,7 +22,5 @@ public class PrimaryBeanConfigurationTest {
         Foo foo = applicationContext.getBean(Foo.class);
         Foo foo1 = applicationContext.getBean("foo1" ,Foo.class);
         Foo foo2 = applicationContext.getBean("foo2" ,Foo.class);
-
-
     }
 }
