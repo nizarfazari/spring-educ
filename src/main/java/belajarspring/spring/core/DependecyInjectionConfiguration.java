@@ -6,22 +6,14 @@ import belajarspring.spring.core.bean.data.FooBar;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
 
 
-/*
-    Depends On digunakan untuk Bean dibuat saat setelah bean lain
-    Jadi dibawah Bar akan dibuat terlebih dahulu daripada Foo
-*/
 @Configuration
 public class DependecyInjectionConfiguration {
 
     @Bean
     @Primary
-    @DependsOn({
-        "bar"
-    })
     public Foo fooFirst(){
         return  new Foo();
     }
