@@ -4,6 +4,7 @@ package belajarspring.spring.core.services;
 import belajarspring.spring.core.repository.CustomerRepository;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,6 +14,13 @@ public class CustomerService {
 
     @Getter
     @Autowired
-    private CustomerRepository customerRepository;
+    @Qualifier("normalCustomerRepository")
+    private CustomerRepository normalCustomerRepository;
+
+
+    @Getter
+    @Autowired
+    @Qualifier("premiumCustomerRepository")
+    private CustomerRepository premiumCustomerRepository;
 
 }

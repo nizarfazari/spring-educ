@@ -1,8 +1,8 @@
 package belajarspring.spring.core;
 
 
-import belajarspring.spring.core.imports.BarConfiguration;
-import belajarspring.spring.core.imports.FooConfiguration;
+import belajarspring.spring.core.configuration.BarConfiguration;
+import belajarspring.spring.core.configuration.FooConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 

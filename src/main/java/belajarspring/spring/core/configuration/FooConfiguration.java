@@ -1,4 +1,4 @@
-package belajarspring.spring.core.imports;
+package belajarspring.spring.core.configuration;
 
 import belajarspring.spring.core.bean.data.Foo;
 import org.springframework.context.annotation.Bean;

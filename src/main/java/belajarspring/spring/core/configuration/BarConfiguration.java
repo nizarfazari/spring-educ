@@ -1,4 +1,4 @@
-package belajarspring.spring.core.imports;
+package belajarspring.spring.core.configuration;
 
 
 import belajarspring.spring.core.bean.data.Bar;

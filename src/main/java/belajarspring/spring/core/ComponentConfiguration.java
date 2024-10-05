@@ -8,7 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(
         basePackages = {
                 "belajarspring.spring.core.services",
-                "belajarspring.spring.core.repository"
+                "belajarspring.spring.core.repository",
+                "belajarspring.spring.core.configuration"
         }
 )
 public class ComponentConfiguration {
