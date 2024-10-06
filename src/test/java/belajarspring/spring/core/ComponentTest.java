@@ -1,5 +1,6 @@
 package belajarspring.spring.core;
 
+import belajarspring.spring.core.bean.MultiFoo;
 import belajarspring.spring.core.repository.CategoryRepository;
 import belajarspring.spring.core.repository.CustomerRepository;
 import belajarspring.spring.core.services.CategoryService;
@@ -50,9 +51,14 @@ public class ComponentTest {
 
         Assertions.assertSame(normalCustomerRepository, customerService.getNormalCustomerRepository());
         Assertions.assertSame(premiumCustomerRepository, customerService.getPremiumCustomerRepository());
-
-
     }
 
 
+    @Test
+    void testObjectProvider() {
+        MultiFoo multiFoo = applicationContext.getBean(MultiFoo.class);
+
+        System.out.println(multiFoo.getFooList());
+        Assertions.assertEquals(3 , multiFoo.getFooList().size());
+    }
 }
