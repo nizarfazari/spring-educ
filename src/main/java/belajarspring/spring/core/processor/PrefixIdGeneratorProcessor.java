@@ -10,22 +10,22 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 
-@Slf4j
 @Component
-public class IdGeneratorPostProcessor implements BeanPostProcessor, Ordered {
+@Slf4j
+public class PrefixIdGeneratorProcessor implements BeanPostProcessor, Ordered {
 
     @Override
     public int getOrder() {
-        return 1;
+        return 2;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        log.info("Id Generator Processor adalah" , beanName);
+        log.info("Prefix Generator" , bean);
         if (bean instanceof IdAware) {
-            log.info("Set Id Generator Processor for Bean", bean);
+            log.info("Prefix Generator for Bean", bean);
             IdAware idAware = (IdAware) bean;
-            idAware.setId(UUID.randomUUID().toString());
+            idAware.setId("PREFIX-" + idAware.getId());
         }
         return bean;
     }
