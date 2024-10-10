@@ -61,4 +61,6 @@ public class ComponentTest {
         System.out.println(multiFoo.getFooList());
         Assertions.assertEquals(3 , multiFoo.getFooList().size());
     }
+
+
 }
